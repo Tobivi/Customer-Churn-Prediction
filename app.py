@@ -30,8 +30,8 @@ def main():
     TotalCharges = st.number_input('TotalCharges')
     submit = st.button('Predict') 
 
-pickle_in = open('randomforest.pkl','rb')
-model = pickle.load(pickle_in)
+   pickle_in = open('randomforest.pkl','rb')
+   model = pickle.load(pickle_in)
 
 #prediction code
     if submit:
