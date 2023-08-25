@@ -29,8 +29,8 @@ def main():
     MonthlyCharges = st.number_input('MonthlyCharges')
     TotalCharges = st.number_input('TotalCharges')
     submit = st.button('Predict') 
-with open('randomforest.joblib', 'rb') as rf:
-    model = joblib.load(rf)
+with open('randomforest.pkl', 'rb') as rf:
+    model = pickle.load(rf)
 
 #prediction code
     if submit:
