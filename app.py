@@ -1,12 +1,14 @@
+import sklearn
 import pickle
 import streamlit as st
-import sklearn
-import joblib
+
 # pickle_in = open('randomforest.pkl','rb')
 # model = pickle.load(pickle_in)
-model = pickle.load(open("randomforest.pkl","rb")
+
 # def main():
 st.title("Predicting customer churn")
+
+model = pickle.load(open('randomforest.pkl',"rb"))
 
 customerID = st.number_input("The Id's of customer's")
 gender = st.number_input('The gender of individuals be it male or female')
@@ -28,10 +30,12 @@ PaperlessBilling = st.number_input('PaperlessBilling')
 PaymentMethod = st.number_input('PaymentMethod')
 MonthlyCharges = st.number_input('MonthlyCharges')
 TotalCharges = st.number_input('TotalCharges')
-submit = st.button('Predict')
+submit = st.button('Predict') 
+
+
 
 #prediction code
-  if submit:
+if submit:
         Prediction = model.predict([[customerID, gender, SeniorCitizen, Partner, Dependents,
        tenure, PhoneService, MultipleLines, InternetService,
        OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport,
@@ -42,7 +46,3 @@ submit = st.button('Predict')
             st.write('There was no Customer churning')
         else:
             st.write("There was Customer churning")
-            
-            
-# if __name__ == '__main__':
-#     main()
