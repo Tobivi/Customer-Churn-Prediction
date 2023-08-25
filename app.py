@@ -2,8 +2,8 @@ import pickle
 import streamlit as st
 import sklearn
 import joblib
-# pickle_in = open('randomforest.pkl','rb')
-# model = pickle.load(pickle_in)
+pickle_in = open('randomforest.pkl','rb')
+model = pickle.load(pickle_in)
 
 def main():
     st.title("Predicting customer churn")
@@ -28,9 +28,7 @@ def main():
     PaymentMethod = st.number_input('PaymentMethod')
     MonthlyCharges = st.number_input('MonthlyCharges')
     TotalCharges = st.number_input('TotalCharges')
-    submit = st.button('Predict') 
-with open('randomforest.pkl', 'rb') as rf:
-    model = pickle.load(rf)
+    submit = st.button('Predict')
 
 #prediction code
     if submit:
