@@ -4,7 +4,7 @@ import sklearn
 import joblib
 # pickle_in = open('randomforest.pkl','rb')
 # model = pickle.load(pickle_in)
-  model = pickle.load(open("randomforest.pkl","rb")
+model = pickle.load(open("randomforest.pkl","rb")
 # def main():
 st.title("Predicting customer churn")
 
