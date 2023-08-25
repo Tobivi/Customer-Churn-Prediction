@@ -8,9 +8,6 @@ import sklearn
 def main():
     st.title("Predicting customer churn")
 
-    pickle_in = open('randomforest.pkl','rb')
-    model = pickle.load(pickle_in)
-
     customerID = st.number_input("The Id's of customer's")
     gender = st.number_input('The gender of individuals be it male or female')
     SeniorCitizen = st.number_input('SeniorCitizen')
