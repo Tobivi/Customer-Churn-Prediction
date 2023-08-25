@@ -3,7 +3,6 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-from transformers import pipeline
 # pickle_in = open('randomforest.pkl','rb')
 # model = pickle.load(pickle_in)
 
