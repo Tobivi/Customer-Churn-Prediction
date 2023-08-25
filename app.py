@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 import sklearn
-
+import joblib
 # pickle_in = open('randomforest.pkl','rb')
 # model = pickle.load(pickle_in)
 
@@ -30,7 +30,7 @@ def main():
     TotalCharges = st.number_input('TotalCharges')
     submit = st.button('Predict') 
 with open('randomforest.pkl', 'rb') as rf:
-    model = pickle.load(rf)
+    model = joblib.load(rf)
 
 #prediction code
     if submit:
